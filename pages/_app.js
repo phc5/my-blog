@@ -19,6 +19,10 @@ export default function Nextra({ Component, pageProps }) {
           type="font/woff2"
           crossOrigin="anonymous"
         />
+        <meta
+          name="google-site-verification"
+          content="WdbudBvSIpsb3kKc_omZY845uEArLeCuxMMe7rJ51gA"
+        />
       </Head>
       <Component {...pageProps} />
     </>
