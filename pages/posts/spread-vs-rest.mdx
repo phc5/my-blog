@@ -8,9 +8,9 @@ author: Paul Chong
 
 # Spread vs Rest Syntax
 
-import HitCounter from '../../components/HitCounter';
+import HitCounter from '../../components/HitCounter'
 
-<HitCounter slug='spread-vs-rest' />
+<HitCounter slug="spread-vs-rest" />
 
 ## Problem
 
@@ -24,23 +24,23 @@ Here are some examples:
 
 #### Array
 
-```
+```js
 function add(a, b, c) {
-  return a + b + c;
+  return a + b + c
 }
-const numbers = [10, 20, 30, 40, 50];
+const numbers = [10, 20, 30, 40, 50]
 
-add(...numbers); // 60
+add(...numbers) // 60
 ```
 
 In the above example, we declare a function `add()` that takes in three parameters. Then we declare a variables called `numbers` and initalize it to an array filled with five numbers. Lastly, we call the function `add()` with the `numbers` array spread inside the arguments list.
 
 #### String
 
-```
-const phrase = "Spreading this string!"
+```js
+const phrase = 'Spreading this string!'
 
-const characters = [...phrase]; // ["S", "p", "r", "e", "a", "d", "i", "n", "g", " ", "t", "h", "i", "s", " ", "s", "t", "r", "i", "n", "g", "!"]
+const characters = [...phrase] // ["S", "p", "r", "e", "a", "d", "i", "n", "g", " ", "t", "h", "i", "s", " ", "s", "t", "r", "i", "n", "g", "!"]
 ```
 
 Here we declare a variable called `phrase` and initialize it to the string `"Spreading this string!"`. Then we declare a variable `characters` and initialize it to an array literal and spread the `phrase` variable inside. When we write `...phrase` inside the array literal, we are spreading the string inside the array and, as a result, we get each character from the `phrease` in the resulting `characters` array.
@@ -61,15 +61,15 @@ The rest syntax looks just like the spread syntax right? Although they look the 
 
 Here is an example:
 
-```
+```js
 function add(a, b, ...otherArgs) {
-  const sumOfOtherArgs = otherArgs.reduce((acc, curr) => acc + curr, 0);
+  const sumOfOtherArgs = otherArgs.reduce((acc, curr) => acc + curr, 0)
 
-  return a + b + sumOfOtherArgs;
+  return a + b + sumOfOtherArgs
 }
 
-add(1,2,3,4,5,6,7,8,9,10) // 55
-add(1,2) // 3
+add(1, 2, 3, 4, 5, 6, 7, 8, 9, 10) // 55
+add(1, 2) // 3
 ```
 
 In this example, we are using the rest syntax as the last parameter to the function `add()`. The first call to `add()` adds numbers 3, 4, 5, 6, 7, 8, 9, and 10 and then adds 1 and 2 to them, resulting in 55. The second call to `add()` adds 1 and 2, resulting in 3.

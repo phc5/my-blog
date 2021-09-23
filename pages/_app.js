@@ -1,8 +1,8 @@
 import 'nextra-theme-blog/style.css'
 import { usePanelBear } from '../hooks/usePanelbear'
 import Head from 'next/head'
-
-import 'nextra-theme-blog/style.css'
+import Prism from 'prism-react-renderer/prism'
+;(typeof global !== 'undefined' ? global : window).Prism = Prism
 
 export default function Nextra({ Component, pageProps }) {
   usePanelBear(process?.env?.NEXT_PUBLIC_PANEL_BEAR_ID, {

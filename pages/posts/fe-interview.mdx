@@ -8,9 +8,9 @@ author: Paul Chong
 
 # Front End Interview Prep
 
-import HitCounter from '../../components/HitCounter';
+import HitCounter from '../../components/HitCounter'
 
-<HitCounter slug='fe-interview' />
+<HitCounter slug="fe-interview" />
 
 ## HTML
 
@@ -38,22 +38,22 @@ Closure is the combination of a function bundled together with references to its
 
 In JS, functions are not just functions, they are also closures! What that means is the function body has access to variables outside of the function. For example,
 
-```
-const me = 'Paul';
+```js
+const me = 'Paul'
 
 function greetMe() {
-  console.log(`Hello ${me}`);
+  console.log(`Hello ${me}`)
 }
 
 // Hello Paul
-greetMe();
+greetMe()
 ```
 
 Applications include data privacy, partial application, closures, etc...
 
 Currying: is a function that takes multiple parameters as input and returns a function with exactly one parameter.
 
-```
+```js
 let dog = name => breed => age => `${name} is a `${breed} and is ${age} years old.`;
 
 // Kora is a Australian Shepherd and is 2 years old.
@@ -64,20 +64,20 @@ console.log(dog('Kora')('Australian Shepherd')('2'));
 
 Both of these methods are used to invoke functions and take in a `this` value for the first parameter that will be used within the function. For the subsequent arguments, `.call` takes in comma-separated arguments while `.apply` takes in an array of arguments as the next argument.
 
-```
+```js
 function sayMyName(firstName, lastName) {
-  return `Hi, ${firstName} ${lastName}`;
+  return `Hi, ${firstName} ${lastName}`
 }
 
-console.log(sayMyName.call(null, 'Paul', 'Chong'));
-console.log(sayMyName.apply(null, ['Paul', 'Chong']));
+console.log(sayMyName.call(null, 'Paul', 'Chong'))
+console.log(sayMyName.apply(null, ['Paul', 'Chong']))
 ```
 
 ### What does `Function.prototype.bind` do?
 
 `.bind` creates a new function that, when called, as its `this` set to the provided value.
 
-```
+```js
 var x = 1;
 const a = {
   x: 2,
