@@ -1,0 +1,43 @@
+article.prose code::before,
+article.prose code::after {
+  content: none;
+}
+article.prose code {
+  font-size: 0.95em;
+  padding: 0 0.1em;
+}
+
+article.prose a {
+  word-break: break-word;
+}
+
+@media screen and (max-width: 480px) {
+  article {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+  }
+}
+
+details summary {
+  cursor: pointer;
+}
+
+img.next-image {
+  margin: 0;
+}
+
+article.prose pre {
+  background-color: #f7f7f7 !important;
+  border: 1px solid lightgrey;
+  border-radius: 0.25rem;
+}
+article.prose p code {
+  background-color: #f7f7f7 !important;
+  border: 1px solid lightgrey;
+  border-radius: 0.25rem;
+  padding: 0.15rem;
+}
+article.prose pre code {
+  display: inline-block;
+  padding: 0;
+}

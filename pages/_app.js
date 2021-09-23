@@ -4,6 +4,8 @@ import Head from 'next/head'
 import Prism from 'prism-react-renderer/prism'
 ;(typeof global !== 'undefined' ? global : window).Prism = Prism
 
+import '../styles/main.css'
+
 export default function Nextra({ Component, pageProps }) {
   usePanelBear(process?.env?.NEXT_PUBLIC_PANEL_BEAR_ID, {
     // Uncomment to allow sending events on localhost, and log to console too.
